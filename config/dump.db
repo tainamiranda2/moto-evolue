@@ -1,0 +1,18 @@
+create  table usuarios(
+    id int(11) primary key,
+email varchar(25),
+nome varchar(45),
+senha int(25)
+
+);
+
+create table moto(
+    id int(11) primary key,
+nome varchar(25),
+marca varchar(45),
+preco int(25),
+cor varchar(45),
+ano Date,
+velocidade int(25),
+
+);

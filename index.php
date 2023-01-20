@@ -40,13 +40,13 @@ include("./config/connection.php");
             include("./view/pages/newMoto.php");
         break;
         case "views":
-            include("./view/pages/viewsUser.php");
+            include("./view/pages/viewsMoto.php");
         break;
         case "save":
-            include("./view/pages/saveUser.php");
+            include("./view/pages/saveMoto.php");
         break;
         case "edit":
-            include("./view/pages/editUser.php");
+            include("./view/pages/editMoto.php");
         break;
         default:
         print "<h1>bem vindo! </h1>";
@@ -56,11 +56,8 @@ include("./config/connection.php");
         print "  <h2>Nome</h2>";
         print "  <p>Cor</p>";
         print "  <p>Velocidade</p>";
-      //  print "   <li> <a href="/"> Mais deletlhes </a> </li>";
-
-        print " </article>";
-                        
-              
+       print "   <li> <a href="/"> Mais deletlhes </a> </li>";
+        print " </article>";           
         
     }
 ?>

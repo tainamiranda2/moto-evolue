@@ -13,7 +13,7 @@
         <label>E-mail</label>
         <input type="text" placeholder="informe seu E-mail" name="email"/>
         <label>Nome</label>
-        <input type="password" placeholder="informe seu nome" name="nome"/>
+        <input type="text" placeholder="informe seu nome" name="nome"/>
         <label>Senha</label>
         <input type="password" placeholder="informe sua senha" name="senha"/>
   <button type="submit">Entrar</button>
