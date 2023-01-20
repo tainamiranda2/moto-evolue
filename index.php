@@ -37,7 +37,7 @@ include("./config/connection.php");
             include("./admin/login/login.php");
         break;
         case "new":
-            include("./view/pages/newUser.php");
+            include("./view/pages/newMoto.php");
         break;
         case "views":
             include("./view/pages/viewsUser.php");
