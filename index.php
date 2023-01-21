@@ -36,18 +36,7 @@ include("./config/connection.php");
         case "login":
             include("./admin/login/login.php");
         break;
-        case "new":
-            include("./view/pages/newMoto.php");
-        break;
-        case "views":
-            include("./view/pages/viewsMoto.php");
-        break;
-        case "save":
-            include("./view/pages/saveMoto.php");
-        break;
-        case "edit":
-            include("./view/pages/editMoto.php");
-        break;
+       
         default:
         print "<h1>bem vindo! </h1>";
         print " <p>Cadastre suas motos favoritas</p>";

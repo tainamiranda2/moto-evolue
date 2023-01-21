@@ -66,9 +66,9 @@ input[type=text], input[type=password], input[type=date], input[type=number] {
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    border-radius: 30px;
+  /*  border-radius: 10px;*/
     cursor: pointer;
-    width: 100%;
+   /* width: 100%;*/
   }
   
   button:hover {
@@ -83,5 +83,6 @@ input[type=text], input[type=password], input[type=date], input[type=number] {
     background: #FF0000;
   }
   .funcoes{
-    display: flex;
+    display: inline-block;
+    background: black;
   }

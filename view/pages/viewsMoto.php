@@ -26,7 +26,13 @@
         print "<p>".$row->cor."</p>";
       /// print "   <li> <a href="/"> Mais deletlhes </a> </li>";
             echo "
-            <div calss='funcoes'>
+            <a
+            href=\"location.href='?page=edit&id=".$row->id."';\"
+             class='editar'>
+            Mais informações
+            </a>
+            
+            <div class='funcoes'>
             <button 
             onclick=\"location.href='?page=edit&id=".$row->id."';\"
              class='editar'>

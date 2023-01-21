@@ -1,6 +1,7 @@
 <?php
      //   print "pagina de salvar porwue açgo deu errdo";
 switch ($_REQUEST["acao"]) {
+    //funcções do usuario
     case 'createUser':
         $email = $_POST["email"];
         $nome = $_POST["nome"];
@@ -22,7 +23,47 @@ switch ($_REQUEST["acao"]) {
         }
         
         break;
+        case 'checkUser':
+            session_start();
+            // print($_POST['email']);
+            // var_dump ('oi');
+     
+             if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
+                 //redirecionando
+                 print "<script>location.href='Moto-evolue/index.php';</script>";
+             }
+             
+                 $email = $_POST['email'];
+                 $senha =$_POST['senha'];
+     
+                 $sql = "SELECT * FROM usuarios 
+                 WHERE email= '$email' 
+                 AND senha = '$senha' ";
+             $res = $conn->query($sql) or die($conn->error);
+     
+             $row=$res->fetch_object();
+             $qtd = $res->num_rows;
+             if($qtd>0){
+                 $_SESSION["email"]=$email;
+                 $_SESSION["senha"]=$senha;
+                 print "<script>alert('Logado com sucesso');</script>";
+                 print "<script>location.href='home.php';</script>";
+             }else{
+                 print "<script>alert('Erro ao fazer login');</script>";
+                 print "<script>location.href='index.php';</script>";
+             }
+     
+     
+             break;
+    case 'logoutUser':
+        session_start();
 
+        unset($_SESSION["email"]);
+        unset($_SESSION["senha"]);
+        session_destroy();
+        header("Location: index.php");
+
+        break;    
         case 'createMoto':
             $nome = $_POST["nome"];
             $marca = $_POST["marca"];
@@ -46,6 +87,7 @@ switch ($_REQUEST["acao"]) {
             }
 
             break;
+            //funções do crud
             case 'edit':
           $nome = $_POST["nome"];
             $marca = $_POST["marca"];
@@ -98,42 +140,6 @@ switch ($_REQUEST["acao"]) {
         }
                 break;
 
-    case 'checkUser':
-        print($_POST['email']);
-
-        if(isset($_POST['email']) || isset($_POST['senha'])){
-            if(strlen($_POST['email'])==0){
-            print "Preencha sua email";
-            }else if(strlen($_POST['senha'])==0){
-            print "Preencha sua senha";
-            }else{
-                $email = $conn->real_escape_string($_POST['email']);
-                $senha = $conn->real_escape_string($_POST['senha']);
-        
-                $sql_code = "SELECT * FROM usuarios WHERE email= '$email' AND senha = '$senha' ";
-        
-                $sql_query = $conn->query($sql_code) or die("Falha da execução do código");
-        
-                //verifcndo a quantidade de registro
-                $quantidade = $sql_query->num_rows;
-                
-               /* if($quantidade==1){
-                    $usuario=$sql_query->fetch_assoc();
-        
-                    if(!isset($_SESSION)){
-                        session_status();
-                    }
-        
-                    $_SESSION(['id']=$usuario['id']);
-        
-                    $_SESSION(['nome']=$usuario['nome']);
-                    //redirecionando
-                    header("Location:page=views");
-                }else{
-                    print "Faha ao logar! Senha e email estão incorretas";
-                }*/
-            }
-        }
-        break;
-}
+   
+    }
 ?>
