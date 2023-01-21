@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,8 @@
 </head>
 <body>
     <h1>Faça login</h1>
-    <form>
+    <form action="?page=save"  method="POST">
+    <input type="hidden" name="acao" value="checkUser">
         <label>E-mail</label>
         <input type="text" placeholder="informe seu E-mail" name="email"/>
         <label>Senha</label>
@@ -18,16 +20,5 @@
     </form>
 </body>
 
-<?php
-include("connection.php");
-if(isset($_POST['email']) || isset($_POST['senha'])){
-    if(strlen($_POST['email'])==0){
-    echo "Preencha sua email";
-    }else if(strlen($_POST['senha'])==0){
-        echo "Preencha sua senha";
-    }else{
-        echo "";
-    }
-}
-?>
+
 </html>

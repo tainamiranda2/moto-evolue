@@ -9,6 +9,9 @@
 <body>
     <h1>Todos as motos cadastradas</h1>
     <?php
+
+
+    //tentando pegar dados
     $sql = "SELECT * FROM moto";
 
     $res = $conn->query($sql);
@@ -16,17 +19,38 @@
     $qtd=$res->num_rows;
     if($qtd>0){
         while($row=$res->fetch_object()){
-    print " <article>";
-        print "  <h2>Nome</h2>";
-        print "  <p>Cor</p>";
-        print "  <p>Velocidade</p>";
-       print "   <li> <a href="/"> Mais deletlhes </a> </li>";
+        print "<article>";
+        print "<h2>".$row->nome."</h2>";
+        print "<p>".$row->marca."</p>";
+        print "<p>".$row->preco."</p>";
+        print "<p>".$row->cor."</p>";
+      /// print "   <li> <a href="/"> Mais deletlhes </a> </li>";
+            echo "
+            <div calss='funcoes'>
+            <button 
+            onclick=\"location.href='?page=edit&id=".$row->id."';\"
+             class='editar'>
+            Editar
+            </button>
+            <button  
+            class='excluir'
+             onclick=\"if(confirm('tem certeza que deseja excluir')){
+                location.href='?page=save&acao=delete&id=".$row->id."';}
+                else{false;}\"
+             >
+            Excluir
+            </button>
+            </div>
+      ";
         print " </article>";
         }
+
         }else{
             print "<p>Não encontrou resultados</p>";
+          // print "<a href=\'$=?page=views'\>Public uma nova moto</a>";
         }
     
         ?>
+
 </body>
 </html>

@@ -56,20 +56,32 @@ input[type=text], input[type=password], input[type=date], input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+  /*  display: inline-block;*/
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
   button {
-    background-color: #04AA6D;
+    background: #04AA6D;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
+    border-radius: 30px;
     cursor: pointer;
     width: 100%;
   }
   
   button:hover {
     opacity: 0.8;
+  }
+
+   .editar{
+    background: #04AA;
+  }
+
+  .excluir{
+    background: #FF0000;
+  }
+  .funcoes{
+    display: flex;
   }
