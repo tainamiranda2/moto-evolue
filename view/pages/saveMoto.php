@@ -24,6 +24,7 @@ switch ($_REQUEST["acao"]) {
         
         break;
         case 'checkUser':
+            print("teste de cehck usuariso");
             session_start();
             // print($_POST['email']);
             // var_dump ('oi');
@@ -56,6 +57,8 @@ switch ($_REQUEST["acao"]) {
      
              break;
     case 'logoutUser':
+        print("teste");
+        
         session_start();
 
         unset($_SESSION["email"]);

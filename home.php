@@ -17,24 +17,22 @@
 <body>
 <nav>
 <ul>
-    <li>
-        <a href="/moto-evolue/Home.php">Home</a>
-    </li>
+  
     <li>
         <a href="?page=new"> Cadastro moto</a>
     </li>
     <li>
         <a href="?page=views">Ver motos</a>
     </li>
-    <li>
-        <a href="?page=save">Sair</a>
-    </li>
+    
 </ul>
-
+<input type="search" placeholder="Pesquise alguam moto"/>
+<button onclick=location.href='?page=save&acao=logoutUser';>Sair</button>
 </nav>
     <?php
-    print "Olá, ".$_SESSION["email"];
-   
+    print "Olá, sou a página home ".$_SESSION["email"];
+   /* arquivo de conexão com o banco*/
+include("./config/connection.php");
     switch (@$_REQUEST["page"]) {
         case "new":
             include("./view/pages/newMoto.php");

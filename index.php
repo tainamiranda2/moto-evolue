@@ -40,12 +40,15 @@ include("./config/connection.php");
         default:
         print "<h1>bem vindo! </h1>";
         print " <p>Cadastre suas motos favoritas</p>";
-        print "<span>Este é um exemplo.</span>";
+      
         print " <article>";
-        print "  <h2>Nome</h2>";
-        print "  <p>Cor</p>";
-        print "  <p>Velocidade</p>";
-       print "   <li> <a href="/"> Mais deletlhes </a> </li>";
+        print "<img alt='imagem de moto' src='./img.png' />";
+        print "<section>";
+        print "  <h2>Honda CG 160</h2>";
+        print "  <p>Vermelha</p>";
+        print "  <p>160 km</p>";
+       print "   <button> Mais deletlhes </button>";
+       print "</section>";
         print " </article>";           
         
     }
