@@ -14,12 +14,12 @@ switch ($_REQUEST["acao"]) {
         $res = $conn->query($sql);
 
         if ($res === true) {
-            print "<script>alert('Cadastrado com sucesso');</script>";
-             print "<script>location.href='?page=views';</script>";
+            print "<script>alert('usuario Cadastrado com sucesso');</script>";
+             print "<script>location.href='home.php';</script>";
         
         }else{
         print "<script>alert('Erro ao fazer cadastros');</script>";
-          print "<script>location.href='?page=views';</script>";
+          print "<script>location.href='index.php';</script>";
         }
         
         break;
@@ -31,8 +31,9 @@ switch ($_REQUEST["acao"]) {
      
              if (empty($_POST) or (empty($_POST["email"]) or (empty($_POST["senha"])))) {
                  //redirecionando
-                 print "<script>location.href='Moto-evolue/index.php';</script>";
-             }
+                 print "<script>location.href='index.php';</script>";
+            print "<script>alert('Erro ao fazer login')</script>";
+                }
              
                  $email = $_POST['email'];
                  $senha =$_POST['senha'];
@@ -142,7 +143,8 @@ switch ($_REQUEST["acao"]) {
         
         }
                 break;
-
+    
+    
    
     }
 ?>

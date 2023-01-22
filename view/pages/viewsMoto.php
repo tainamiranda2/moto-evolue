@@ -7,10 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Todos as motos cadastradas</h1>
+<h1>Todos as motos cadastradas</h1>
+<form
+ class='pesquisar' action="acao" method="post">
+  <input 
+    type='text' 
+    placeholder='Pesquise alguma moto' 
+    name='searchName'/>
+    
+
+    <button type='submit' class='busca'
+     value='enviar' onclick="location.href='?page=busca'"
+   >
+    Pesquisar
+    </button>
+    <form>
+      <br/>
     <?php
-
-
+  
+    //teste para ver se dar certo com pesquisa
+  
+    
     //tentando pegar dados
     $sql = "SELECT * FROM moto";
 
@@ -25,13 +42,9 @@
         print "<p>".$row->preco."</p>";
         print "<p>".$row->cor."</p>";
       /// print "   <li> <a href="/"> Mais deletlhes </a> </li>";
+      //    <a href=\"location.href='?page=edit&id=".$row->id."';\"class='editar'>Mais informações</a>
             echo "
-            <a
-            href=\"location.href='?page=edit&id=".$row->id."';\"
-             class='editar'>
-            Mais informações
-            </a>
-            
+          
             <div class='funcoes'>
             <button 
             onclick=\"location.href='?page=edit&id=".$row->id."';\"

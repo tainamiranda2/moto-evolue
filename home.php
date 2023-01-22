@@ -26,11 +26,10 @@
     </li>
     
 </ul>
-<input type="search" placeholder="Pesquise alguam moto"/>
 <button onclick=location.href='?page=save&acao=logoutUser';>Sair</button>
 </nav>
     <?php
-    print "Olá, sou a página home ".$_SESSION["email"];
+   // print "Olá, sou a página home ".$_SESSION["email"];
    /* arquivo de conexão com o banco*/
 include("./config/connection.php");
     switch (@$_REQUEST["page"]) {
@@ -46,6 +45,10 @@ include("./config/connection.php");
         case "edit":
             include("./view/pages/editMoto.php");
             break;
+            case "busca":
+                include("./view/pages/searchMoto.php");
+                break;
+               
     }
     ?>
 </body>

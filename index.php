@@ -36,7 +36,18 @@ include("./config/connection.php");
         case "login":
             include("./admin/login/login.php");
         break;
-       
+        case "new":
+            include("./view/pages/newMoto.php");
+            break;
+        case "views":
+            include("./view/pages/viewsMoto.php");
+            break;
+        case "save":
+            include("./view/pages/saveMoto.php");
+            break;
+        case "edit":
+            include("./view/pages/editMoto.php");
+            break;
         default:
         print "<h1>bem vindo! </h1>";
         print " <p>Cadastre suas motos favoritas</p>";
@@ -47,7 +58,7 @@ include("./config/connection.php");
         print "  <h2>Honda CG 160</h2>";
         print "  <p>Vermelha</p>";
         print "  <p>160 km</p>";
-       print "   <button> Mais deletlhes </button>";
+       print "   <button>  deletlhes </button>";
        print "</section>";
         print " </article>";           
         
