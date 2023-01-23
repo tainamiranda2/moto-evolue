@@ -16,7 +16,7 @@
    
 <ul>
     
-<img alt="logo" width="50px" height="50px" src="./img.png"/>
+
 
     <li>
         <a href="/moto-evolue/index.php">Home</a>

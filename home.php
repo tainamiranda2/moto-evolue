@@ -23,7 +23,6 @@
 
 <ul>
     
-<img alt="logo" width="50px" height="50px" src="./img.png"/>
   
     <li>
         <a href="?page=new"> Cadastro moto</a>
@@ -31,19 +30,15 @@
     <li>
         <a href="?page=views">Ver motos</a>
     </li>
-
-   <!-- <li>
-        <a href="?page=busca">Fazer uma pesquisa</a>
+    <li>
+        <a href="?page=busca">Pesquisar motos</a>
     </li>
--->
-<li>
-    <a class="sair" onclick=location.href='?page=save&acao=logoutUser';>Sair
+<a class="sair" onclick=location.href='?page=save&acao=logoutUser';>Sair
 </a>
-  
-<li>
 </ul>
 
 </nav>
+
     <?php  
    // print "Olá, sou a página home ".$_SESSION["email"];
    /* arquivo de conexão com o banco*/

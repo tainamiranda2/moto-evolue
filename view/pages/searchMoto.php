@@ -10,30 +10,37 @@
 </head>
 <body>
     <h2>Resultados da pesquisa</h2>
-<form class="formSearch" action="acao">
-<input type="hidden" name="acao" value="checkUser">
 
-<input name="pesquisa" type="text" placeholder="Faça uma pesquisa">
-<button type="submit">Pesquisar</button>
-</form>
 
 <!--itens gerais-->
 <?php
-  $busca =$_GET['pesquisa'];
+$busca =$_POST["pesquisa"];
+print $busca;
 //print $_SESSION["pesquisar"];
-$sql = "SELECT FROM moto WHERE nome LIKE '$busca' or marca LIKE  '$busca' ";
+$sql = "SELECT * FROM moto WHERE nome LIKE '%$busca%'  ";
 
 $res = $conn->query($sql);
-
+print $res;
 $qtd=$res->num_rows;
+print $qtd;
 
 if($qtd>0){
-  print "Estou aqui";
+  print "<h2> Estou aqui </h2>";
+  while ($row = $res->fetch_object()) {
+    print "<article>";
+    print "<img alt='imagem de moto' src='./img.png' />";
+    print "<section>";
+    print "<h2><strong>Nome</strong>:" . $row->nome . "</h2>";
+    print "<p><strong>Marca</strong>: " . $row->marca . "</p>";
+    print "<p><strong>Preço</strong>:" . $row->preco . "</p>";
+    print "<p><strong>Cor</strong>: " . $row->cor . "</p>";
+    print "</article>";
+  }
 }else{
-print "algo deu errado";
+print "<p>Nenhum dado foi encontrado!</p>";
 }
 ?>
-<h2>oi</h2>
+
 </body>
 
 </html>

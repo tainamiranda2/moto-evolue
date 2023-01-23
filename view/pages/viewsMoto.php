@@ -8,11 +8,15 @@
 </head>
 <body>
 <h1>Todos as motos cadastradas</h1>
- 
+<form action="?page=busca" method="post">
+<input name="pesquisa" type="text" placeholder="Faça uma pesquisa">
+<button type="submit">Pesquisar</button>
+</form>
+
       <br/>
+
       <?php
   
-    
     //teste para ver se dar certo com pesqu
     //tentando pegar dados
     $sql = "SELECT * FROM moto";
@@ -21,6 +25,7 @@
     
     $qtd=$res->num_rows;
     if($qtd>0){
+
         while($row=$res->fetch_object()){
         print "<article>";
         print "<img alt='imagem de moto' src='./img.png' />";
@@ -29,9 +34,7 @@
         print "<p><strong>Marca</strong>: ".$row->marca."</p>";
         print "<p><strong>Preço</strong>:".$row->preco."</p>";
         print "<p><strong>Cor</strong>: ".$row->cor."</p>";
-      
-      /// print "   <li> <a href="/"> Mais deletlhes </a> </li>";
-      //    <a href=\"location.href='?page=edit&id=".$row->id."';\"class='editar'>Mais informações</a>
+    
             echo "
           
             <div class='funcoes'>
@@ -50,9 +53,10 @@
             Excluir
             </button>
             <button 
+            class='fa fa-search detalhes'
             onclick=\"location.href='?page=view&id=".$row->id."';\"
-             class='fa fa-square detalhes'>
-            Ver mais
+            >
+            Detalhes
             </button>
             </div>
       ";

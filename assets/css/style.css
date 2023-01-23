@@ -6,14 +6,16 @@
 nav{
    
     width: 100%;
-  background: #33CCFF;
-
-/*color: #fff;*/
+  background: #f82b2b;
 
 display: inline-block;
 padding: 16px;
 }
-
+.sair{
+  float: right;
+  cursor: pointer;
+  color: #fff;
+}
 ul li {
    background: #fff;
     padding: 10px;
@@ -97,17 +99,35 @@ input[type=text], input[type=password], input[type=date], input[type=number] {
 
    .editar{
     background: #04AA;
+    margin: 5px;
+
   }
 
   .excluir{
     background: #FF0000;
+    margin: 5px;
+
   }
   .funcoes{
-    display: flex;
+    display: inline-flex;
     margin: 5px;
-  padding: 10px;
+  padding: 5px;
   }
-  
+  .detalhes{
+    background: #9b9595;
+    margin: 5px;
+  }
   .busca{
     background: #04AA;
+  }
+  @media screen and (max-width: 500px) {
+    nav a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    nav {
+      float: none;
+    }
   }
