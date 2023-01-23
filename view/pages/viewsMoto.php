@@ -8,26 +8,12 @@
 </head>
 <body>
 <h1>Todos as motos cadastradas</h1>
-<form
- class='pesquisar' action="acao" method="post">
-  <input 
-    type='text' 
-    placeholder='Pesquise alguma moto' 
-    name='searchName'/>
-    
-
-    <button type='submit' class='busca'
-     value='enviar' onclick="location.href='?page=busca'"
-   >
-    Pesquisar
-    </button>
-    <form>
+ 
       <br/>
-    <?php
-  
-    //teste para ver se dar certo com pesquisa
+      <?php
   
     
+    //teste para ver se dar certo com pesqu
     //tentando pegar dados
     $sql = "SELECT * FROM moto";
 
@@ -37,10 +23,13 @@
     if($qtd>0){
         while($row=$res->fetch_object()){
         print "<article>";
-        print "<h2>".$row->nome."</h2>";
-        print "<p>".$row->marca."</p>";
-        print "<p>".$row->preco."</p>";
-        print "<p>".$row->cor."</p>";
+        print "<img alt='imagem de moto' src='./img.png' />";
+        print "<section>";
+        print "<h2><strong>Nome</strong>:".$row->nome."</h2>";
+        print "<p><strong>Marca</strong>: ".$row->marca."</p>";
+        print "<p><strong>Preço</strong>:".$row->preco."</p>";
+        print "<p><strong>Cor</strong>: ".$row->cor."</p>";
+      
       /// print "   <li> <a href="/"> Mais deletlhes </a> </li>";
       //    <a href=\"location.href='?page=edit&id=".$row->id."';\"class='editar'>Mais informações</a>
             echo "
@@ -48,20 +37,27 @@
             <div class='funcoes'>
             <button 
             onclick=\"location.href='?page=edit&id=".$row->id."';\"
-             class='editar'>
+             class='fa fa-square editar'>
             Editar
             </button>
             <button  
-            class='excluir'
+             class='fa fa-trash excluir'
+             
              onclick=\"if(confirm('tem certeza que deseja excluir')){
                 location.href='?page=save&acao=delete&id=".$row->id."';}
                 else{false;}\"
              >
             Excluir
             </button>
+            <button 
+            onclick=\"location.href='?page=view&id=".$row->id."';\"
+             class='fa fa-square detalhes'>
+            Ver mais
+            </button>
             </div>
       ";
         print " </article>";
+        print "</section>";
         }
 
         }else{

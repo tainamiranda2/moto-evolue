@@ -143,8 +143,10 @@ switch ($_REQUEST["acao"]) {
         
         }
                 break;
-    
-    
+
+    case 'search':
+        print "oi chegou aqui";
+        break;
    
     }
 ?>
