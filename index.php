@@ -62,12 +62,12 @@ include("./config/connection.php");
         print " <article>";
         print " <img src='./assets/img/moto.png'/>";
         print "<section>";
-        print "  <h3><strong>Nome</strong>: Honda CG 160</h3>";
+        print "  <h2><strong>Nome</strong>: Honda CG 160</h2>";
         print "  <p><strong>Marca</strong>: Honda</p>";
         print "  <p><strong>Cor</strong>: Vermelha</p>";
         print "  <p><strong>Velocidade</strong>: 160KM</p>";
         print "  <p><strong>Ano</strong> 31/08/2022</p>";
-        print "  <p><strong>Preço</strong>: 5000,00</p>";
+        print "  <p><strong>Preço</strong>: 5000,00 R$</p>";
        print "</section>";
         print " </article>";           
         

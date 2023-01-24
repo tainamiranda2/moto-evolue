@@ -49,41 +49,34 @@ article{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-
+    margin-bottom: 50px;
     color: #f82b2b;
   
 }
-article p+ h2{
-justify-content: left;
-}
+
 article img{
   width: 150px;
   height: 150px;
  /* margin-left: auto;
   margin-right: auto;*/
-  display: block;
+ display: block;
   margin:auto;
+ 
 }
-.articleViews{
-  display:inline;
-}
+
 article:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     cursor: pointer;
   }
-  article section{
-    margin: 10px;
-    display: inline-block;
-   /* justify-content: start;
-    align-items: flex-start;*/
-  }
+
  /*formulario*/
   form {
-
-    margin-left: auto;
-    margin-right: auto;
     width:50%;
     color: #f82b2b;
+    display: block;
+margin:auto;
+margin-top: 50px;
+margin-bottom: 50px;
 }
 .imagemC{
   display: block;
@@ -102,13 +95,14 @@ input[type=text], input[type=password], input[type=date], input[type=number] {
 
   }
   button {
-    background: #04AA6D;
+    background: #f82b2b;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
    width: 100%;
+   margin: 5px;
   }
   
   button:hover {
@@ -137,13 +131,14 @@ input[type=text], input[type=password], input[type=date], input[type=number] {
   }
   footer{
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     background: #FF0000;
     color: #fff;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+   
   }
 footer a, span{
   color: #fff;
@@ -165,8 +160,7 @@ footer a, span{
     padding: 5px;
       
     }
-    .imagemC{
-      width: 50%;
-      float: left;
-    }
+   .imagemC{
+    margin-top: 50px;
+   }
   }

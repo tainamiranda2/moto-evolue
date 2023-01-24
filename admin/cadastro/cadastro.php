@@ -9,14 +9,14 @@
 <body>
     <h1>Faça cadastro</h1>
     <form action="?page=save"  method="POST">
-    <input type="hidden" name="acao" value="createUser">
+    <input type="hidden" name="acao" value="createUser" >
         <label>E-mail</label>
-        <input type="text" placeholder="informe seu E-mail" name="email"/>
+        <input type="text" placeholder="informe seu E-mail" required name="email"/>
         <label>Nome</label>
-        <input type="text" placeholder="informe seu nome" name="nome"/>
+        <input type="text" placeholder="informe seu nome" required name="nome"/>
         <label>Senha</label>
-        <input type="password" placeholder="informe sua senha" name="senha"/>
-  <button type="submit">Entrar</button>
+        <input type="password" placeholder="informe sua senha" required name="senha"/>
+  <button type="submit">Cadastrar</button>
     </form>
 </body>
 <?php

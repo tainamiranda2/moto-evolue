@@ -12,9 +12,9 @@
     <form action="?page=save"  method="POST">
     <input type="hidden" name="acao" value="checkUser">
         <label>E-mail</label>
-        <input type="text" placeholder="informe seu E-mail" name="email"/>
+        <input type="text" required placeholder="informe seu E-mail" name="email"/>
         <label>Senha</label>
-        <input type="password" placeholder="informe sua senha" name="senha"/>
+        <input type="password" required placeholder="informe sua senha" name="senha"/>
      
   <button type="submit">Entrar</button>
     </form>

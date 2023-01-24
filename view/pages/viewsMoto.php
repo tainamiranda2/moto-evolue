@@ -29,10 +29,10 @@
         while($row=$res->fetch_object()){
         print "<article >";
         print "<img src='./assets/img/moto.png'/>";
-        print "<section>";
+        print "<section >";
         print "<h2><strong>Nome</strong>:".$row->nome."</h2>";
         print "<p><strong>Marca</strong>: ".$row->marca."</p>";
-        print "<p><strong>Preço</strong>:".$row->preco."</p>";
+        print "<p><strong>Preço</strong>:".$row->preco."R$</p>";
         print "<p><strong>Cor</strong>: ".$row->cor."</p>";
         print "</section>";
             echo "
