@@ -60,20 +60,25 @@ include("./config/connection.php");
         print " <p>Cadastre suas motos favoritas</p>";
       
         print " <article>";
-        print "<img alt='imagem de moto' src='./img.png' />";
+        print " <img src='./assets/img/moto.png'/>";
         print "<section>";
-        print "  <h2><strong>Nome</strong>: Honda CG 160</h2>";
+        print "  <h3><strong>Nome</strong>: Honda CG 160</h3>";
         print "  <p><strong>Marca</strong>: Honda</p>";
         print "  <p><strong>Cor</strong>: Vermelha</p>";
         print "  <p><strong>Velocidade</strong>: 160KM</p>";
         print "  <p><strong>Ano</strong> 31/08/2022</p>";
         print "  <p><strong>Preço</strong>: 5000,00</p>";
-        print "<p><strong>Comentário</strong>: Uma boa marca pode comprar que é confiavel.</p>";
        print "</section>";
         print " </article>";           
         
     }
 ?>
+<footer>
+    <span>&copy;2022 - Tainá Miranda<span>
+    <a href="https://github.com/tainamiranda2" class="fa fa-github"></a>
+    <a href="https://www.linkedin.com/in/tain%C3%A1-miranda-b337b3145" class="fa fa-linkedin"></a>
+
+</footer>
     </body>
 
     </html>

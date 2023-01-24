@@ -15,10 +15,12 @@
 <!--itens gerais-->
 <?php
 $busca =$_POST["pesquisa"];
-print $busca;
+//print $busca;
 //print $_SESSION["pesquisar"];
-$sql = "SELECT * FROM moto WHERE nome LIKE '%$busca%'  ";
 
+$sql = "SELECT * FROM moto WHERE nome LIKE '%$busca%';";
+
+print $sql;
 $res = $conn->query($sql);
 print $res;
 $qtd=$res->num_rows;

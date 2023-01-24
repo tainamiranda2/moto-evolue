@@ -19,6 +19,7 @@
     <h2>Mais detalhes</h2>
        
 <article>
+        <img src='./assets/img/moto.png'/>
         <p> <strong>Nome</strong>:<?php print $row->nome; ?><p>
         <p><strong>Marca</strong>:<?php print $row->marca; ?></p>
         <p><strong>Preço</strong>:<?php print $row->preco; ?></p>

@@ -12,22 +12,22 @@
     <input type="hidden" name="acao" value="createMoto">
         
         <label>Nome</label>
-        <input type="text" placeholder="informe o nome da moto" name="nome"/>
+        <input type="text" required placeholder="informe o nome da moto" name="nome"/>
 
         <label>Marca</label>
-        <input type="text" placeholder="informe a marca da moto" name="marca"/>
+        <input type="text" required placeholder="informe a marca da moto" name="marca"/>
 
         <label>Preço</label>
-        <input type="number" placeholder="informe o preço da moto" name="preco"/>
+        <input type="number" required placeholder="informe o preço da moto" name="preco"/>
 
         <label>Cor</label>
-        <input type="text" placeholder="informe a cor da moto" name="cor"/>
+        <input type="text" required placeholder="informe a cor da moto" name="cor"/>
 
         <label>Informe uma data</label>
-        <input type="date" placeholder="informe a data da moto" name="ano"/>
+        <input type="date" required placeholder="informe a data da moto" name="ano"/>
 
         <label>Velocidade</label>
-        <input type="number" placeholder="informe o preço a velocidade da moto" name="velocidade"/>
+        <input type="number" required placeholder="informe o preço a velocidade da moto" name="velocidade"/>
 
   <button type="submit">Criar</button>
     </form>

@@ -22,17 +22,17 @@
 <nav>
 
 <ul>
-    
+<li>
+        <a href="?home.php">Home</a>
+    </li>
   
     <li>
-        <a href="?page=new"> Cadastro moto</a>
+        <a href="?page=new"> Cadastrar moto</a>
     </li>
     <li>
         <a href="?page=views">Ver motos</a>
     </li>
-    <li>
-        <a href="?page=busca">Pesquisar motos</a>
-    </li>
+  
 <a class="sair" onclick=location.href='?page=save&acao=logoutUser';>Sair
 </a>
 </ul>
@@ -40,7 +40,7 @@
 </nav>
 
     <?php  
-   // print "Olá, sou a página home ".$_SESSION["email"];
+
    /* arquivo de conexão com o banco*/
 include("./config/connection.php");
     switch (@$_REQUEST["page"]) {
@@ -63,8 +63,20 @@ include("./config/connection.php");
             case "busca":
                 include("./view/pages/searchMoto.php");
                 break;
-               
+               default:
+               print "<h2>Olá, ".$_SESSION["email"]." </h2>";
+               print "<p>o objetivo do projeto é criar um sistema onde é possivel cadastrar infomarmações sobre motos. </p>";
+               print "<img width='100%'; class='imagemC' alt='exemplo de moto ilustrativa' src='./assets/img/moto.png'/>";
     }
     ?>
+
+<footer>
+    <span>&copy;2022 - Tainá Miranda<span>
+
+  
+    <a href="https://github.com/tainamiranda2" class="fa fa-github"></a>
+    <a href="https://www.linkedin.com/in/tain%C3%A1-miranda-b337b3145" class="fa fa-linkedin"></a>
+
+</footer>
 </body>
 </html>

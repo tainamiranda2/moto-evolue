@@ -8,17 +8,17 @@
 </head>
 <body>
 <h1>Todos as motos cadastradas</h1>
+<!--
 <form action="?page=busca" method="post">
 <input name="pesquisa" type="text" placeholder="Faça uma pesquisa">
 <button type="submit">Pesquisar</button>
 </form>
-
+-->
       <br/>
 
       <?php
   
-    //teste para ver se dar certo com pesqu
-    //tentando pegar dados
+  
     $sql = "SELECT * FROM moto";
 
     $res = $conn->query($sql);
@@ -27,14 +27,14 @@
     if($qtd>0){
 
         while($row=$res->fetch_object()){
-        print "<article>";
-        print "<img alt='imagem de moto' src='./img.png' />";
+        print "<article >";
+        print "<img src='./assets/img/moto.png'/>";
         print "<section>";
         print "<h2><strong>Nome</strong>:".$row->nome."</h2>";
         print "<p><strong>Marca</strong>: ".$row->marca."</p>";
         print "<p><strong>Preço</strong>:".$row->preco."</p>";
         print "<p><strong>Cor</strong>: ".$row->cor."</p>";
-    
+        print "</section>";
             echo "
           
             <div class='funcoes'>
@@ -60,13 +60,14 @@
             </button>
             </div>
       ";
+       
         print " </article>";
-        print "</section>";
+      
         }
 
         }else{
             print "<p>Não encontrou resultados</p>";
-          // print "<a href=\'$=?page=views'\>Public uma nova moto</a>";
+          
         }
     
         ?>
