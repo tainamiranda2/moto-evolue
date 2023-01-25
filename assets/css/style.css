@@ -148,10 +148,8 @@ footer a, span{
     nav{
       display: block;
     }
-    ul {
-      float: none;
+    ul li {
       display: block;
-     
     }
     
     .funcoes{
